@@ -10,9 +10,9 @@ LaTeX Beamer format.
 * peaks - notes on peaks classification by length based on small subset of [Roadmap Epigenomics](http://www.roadmapepigenomics.org/) data 
 
 ### ENCODE resources
-ENCODE standards <https://www.encodeproject.org/data-standards>
-ENCODE Rest API <https://www.encodeproject.org/help/rest-api>
-ENCODE DNANexus pipelines source <https://github.com/ENCODE-DCC>
+ENCODE standards <https://www.encodeproject.org/data-standards>  
+ENCODE Rest API <https://www.encodeproject.org/help/rest-api>  
+ENCODE DNANexus pipelines source <https://github.com/ENCODE-DCC>  
 
 ### Others
 ChIP-seq analysis notes from Tommy Tang <https://github.com/crazyhottommy/ChIP-seq-analysis>
