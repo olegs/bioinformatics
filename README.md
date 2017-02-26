@@ -1,9 +1,9 @@
 # Bioinformatics
-================
 
-Summary reports on different bioinformatics methods.
+Summary reports on different bioinformatics methods. 
 LaTeX Beamer format.
 
+### Content
 * atacseq - summary on ATAC-Seq processing methods
 * chipseq - summary on ChIP-Seq processing from qc to replicated peak calling
 * differential_chipseq - how to compare replicated data
