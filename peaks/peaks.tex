@@ -51,11 +51,13 @@
 \section{Introduction}
 The goal of this work is to answer the question:
 \textit{How to distinguish narrow and broad ChIP-Seq peaks?}
+ENCODE project standards\\
+\includegraphics[width=\linewidth]{encodestandards.png}\footnote{\url{https://www.encodeproject.org/data-standards/chip-seq/}}
 
 \section{Methods and tools}
 We used ENCODE dataset GSE26320 to estimate ChIP-Seq peak length distribution. It is was shown that different ChIP-Seq modification has different biological function and demonstrate different patterns across genome. \textbf{TODO}\\
 In order to deal with epigenomic data in human readable predicate way it is quite natural to have the ability to classify ChIP-Seq peaks by distribution, shape, intensity, length, etc.\\
-To address this question we performed a simple experiment, which allowed us to compare peaks characteristics provided by different peak callers. We've used gold-standard peak callers: MACS2, SICER as well as our own peak caller ZINBRA.\\
+To address this question we performed a simple experiment, which allowed us to compare peaks characteristics provided by different peak callers. We've used gold-standard peak callers: MACS2, SICER as well peak caller ZINBRA.\\
 
 \subsection{Experiment design}
 \begin{itemize}
@@ -75,7 +77,6 @@ SICER is a tool, which supports peak calling for both narrow and broad peaks out
 
 \section{ZINBRA}
 ZINBRA uses single statistical model for both narrow and broad peaks, producing enrichment states for binned(default bin size = 200, which corresponds to typical nucleosome size) genome, concatenating adjacent enriched bins into wider peaks.
-
 \subsection{FDR = 0.0001}
 \includegraphics[width=0.5\linewidth]{zinbra.png}
 \includegraphics[width=0.5\linewidth]{zinbra2.png}
@@ -88,7 +89,6 @@ ZINBRA uses single statistical model for both narrow and broad peaks, producing 
 \includegraphics[width=0.5\linewidth]{zinbra1e2.png}
 \includegraphics[width=0.5\linewidth]{zinbra1e22.png}
 
-\newpage
 \section{ZINBRA with extended peaks}
 Motivation: in ChIP-Seq enrichment predicates, decision on whether given locus is enriched or not is made according to the fraction of enriched bins within. So that we decided to extend enriched regions (adjacent enriched bins) in following manner: extend each region as much as possible, so that fraction of enriched bins is $\geq$ threshold $k=0.5$. 
 \subsection{Extended peaks FDR = 0.0001 K = 0.5}
@@ -99,7 +99,6 @@ Motivation: in ChIP-Seq enrichment predicates, decision on whether given locus i
 \includegraphics[width=0.5\linewidth]{zinbra1e30.5.png}
 \includegraphics[width=0.5\linewidth]{zinbra1e30.52.png}
 
-\newpage
 \section{MACS2}
 MACS2 by default deals with narrow peaks, however it has \textit{--broad} command line options to process broad peaks as well.
 \subsection{MACS2 Broad}
@@ -113,6 +112,11 @@ MACS2 by default deals with narrow peaks, however it has \textit{--broad} comman
 \subsection{MACS2 Narrow with control}
 \includegraphics[width=0.5\linewidth]{macs2control.png}
 \includegraphics[width=0.5\linewidth]{macs2control2.png}
+
+\section{ENCODE}
+Automatic processed hg19 encode project peaks.\\
+\includegraphics[width=0.5\linewidth]{encodepeaks.png}
+\includegraphics[width=0.5\linewidth]{encodepeaks2.png}
 
 \section{Discussion}
 The evidence shows that MACS2 can hardly be used to estimate both narrow and broad peaks. Even MACS2 in \textit{--broad} mode fails to classify H3K36me3 as broad peaks, since it is known to be associated with gene body.\\
