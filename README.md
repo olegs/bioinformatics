@@ -1,6 +1,6 @@
 # Bioinformatics
 
-Summary reports on different bioinformatics methods. 
+Reviews on different NGS data analysis methods. 
 LaTeX Beamer format.
 
 ### Content
